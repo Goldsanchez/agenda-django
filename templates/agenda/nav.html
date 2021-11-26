@@ -9,7 +9,7 @@
       </a>
       {% if user.is_authenticated %}
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a class="nav-link px-2 link-secondary">Hola {{ user.username | title }} ❤</a></li>
+        <li><a class="nav-link px-2 link-secondary">Hola {{ user.username | title }} ❤ </a></li>
         <a type="button" class="btn btn-outline-dark" href="{% url 'create' %}">Agregar Contacto</a>
       </ul>
       <div class="col-md-3 text-end">
