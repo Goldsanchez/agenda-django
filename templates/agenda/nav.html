@@ -1,0 +1,26 @@
+<div class="container mb-3">
+    <header
+      class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+          <use xlink:href="#bootstrap" />
+        </svg>
+        <span class="fs-4">Agenda</span>
+      </a>
+      {% if user.is_authenticated %}
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a class="nav-link px-2 link-secondary">Hola {{ user.username | title }} ❤</a></li>
+        <a type="button" class="btn btn-outline-dark" href="{% url 'create' %}">Agregar Contacto</a>
+      </ul>
+      <div class="col-md-3 text-end">
+        
+        <a type="button" class="btn btn-danger" href="{% url 'logout' %}">Cerrar Sesión</a>
+      </div>
+      {% else %}
+      <div class="col-md-3 text-end">
+        <a type="button" class="btn btn-primary" href="{% url 'login' %}">Iniciar Sesión</a>
+        <a type="button" class="btn btn-primary" href="{% url 'signup' %}">Registrarse</a>
+      </div>
+      {% endif %}
+    </header>
+  </div>

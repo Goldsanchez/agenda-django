@@ -1,0 +1,18 @@
+{% extends "agenda/base.html" %}
+{% block main %}
+{% if user.is_authenticated %}
+{% if user.id == object.creador.id %}
+<div class="container text-center">
+    <form method="post">{% csrf_token %}
+        <p>Estás seguro que quieres eliminar el contacto: "{{ object }}"?</p>
+        <input class="btn btn-primary" type="submit" value="Confirmar">
+        <a class="btn btn-secondary" href="{% url 'home' %}">Cancelar</a>
+    </form>
+</div>
+{% endif %}
+{% else %}
+<div class="container text-center">
+    <p>No tienes permiso para eliminar este contacto, registrate o inicia sesión.</p>
+</div>
+{% endif %}
+{% endblock %}
