@@ -7,5 +7,3 @@
 ## Bienvenido! 👋
 
 Gracias por revisar esta codificación.
-
-Aquí puedes el demo de [Agenda](https://agenda-django-pe.herokuapp.com/).
