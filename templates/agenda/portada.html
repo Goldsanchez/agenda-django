@@ -7,8 +7,8 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Telefono</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Phone Number</th>
                         <th scope="col"><i class="bi bi-arrow-clockwise"></i></th>
                         <th scope="col"><i class="bi bi-trash"></i></th>
 
@@ -19,12 +19,12 @@
                     <tr>
                         <td>{{item.nombre}}</td>
                         <td>{{item.telefono}}</td>
-                        <td><a href="{% url 'update' item.id %}">Actualizar</a></td>
-                        <td><a href="{% url 'delete' item.id %}">Eliminar</a></td>
+                        <td><a href="{% url 'update' item.id %}">Update</a></td>
+                        <td><a href="{% url 'delete' item.id %}">Delete</a></td>
                     </tr>
                     {% empty %}
                     <tr>
-                        <td colspan="4">No tienes contactos. <a href="{% url 'create' %}">Agregar</a>.</td>
+                        <td colspan="4">You don't have contacts. <a href="{% url 'create' %}">Add</a>.</td>
                     </tr>
                     {% endfor %}
                 </tbody>
@@ -34,16 +34,16 @@
                     {% if page_obj.has_previous %}
                     <li class="page-item"><a class="page-link" href="?page=1">&laquo; </a></li>
                     <li class="page-item"><a class="page-link"
-                            href="?page={{ page_obj.previous_page_number }}">anterior</a></li>
+                            href="?page={{ page_obj.previous_page_number }}">previous</a></li>
 
                     {% endif %}
 
                     <li class="page-link active">
-                        Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+                        Page {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
                     </li>
 
                     {% if page_obj.has_next %}
-                    <li><a class="page-link" href="?page={{ page_obj.next_page_number }}">siguiente</a></li>
+                    <li><a class="page-link" href="?page={{ page_obj.next_page_number }}">next</a></li>
                     <li><a class="page-link" href="?page={{ page_obj.paginator.num_pages }}"> &raquo;</a></li>
                     {% endif %}
                 </ul>
@@ -59,12 +59,11 @@
 <div class="container my-5">
     <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
         <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-            <h1 class="display-4 fw-bold lh-1">Agenda de Contactos</h1>
-            <p class="lead my-4">Con <b>Agenda</b>, guardar tus contactos es muy fácil. El lugar ideal para crear,
-                actualizar y eliminar tus contactos. No pierdas tus contactos, valen oro.</p>
+            <h1 class="display-4 fw-bold lh-1">Contact Book</h1>
+            <p class="lead my-4">With <b>Agenda</b>, saving your contacts is very easy. The ideal place to create, update and delete your contacts. Do not lose your contacts, they are worth gold.</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
                 <a type="button" class="btn btn-outline-primary btn-lg px-4 me-md-2 fw-bold"
-                    href="{% url 'signup' %}">Registrarse</a>
+                    href="{% url 'signup' %}">Sign Up</a>
             </div>
         </div>
         <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">

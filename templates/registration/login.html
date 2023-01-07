@@ -11,9 +11,9 @@
             <form method="POST">{% csrf_token %}
                 {{form|crispy}}
                 
-                <input class="btn btn-primary mt-2" type="submit" value="Iniciar Sesión">
-                <a class="btn btn-secondary mt-2" href="{% url 'home' %}">Cancelsr</a>
-                <p>Don't have an account? <a href="{% url 'signup' %}">Iniciar Sesión</a></p>
+                <input class="btn btn-primary mt-2" type="submit" value="Sign In">
+                <a class="btn btn-secondary mt-2" href="{% url 'home' %}">Cancel</a>
+                <p>Don't have an account? <a href="{% url 'signup' %}">Sign Up</a></p>
             </form>
         </div>
     </div>

@@ -6,18 +6,18 @@
 <div class="container col-md-4 my-3">
     <div class="row">
         <div class="col">
-            <h2>Actualizar Contacto</h2>
+            <h2>Update Contact</h2>
             <form method="POST">{% csrf_token %}
                 {{form|crispy}}                   
-                <input class="btn btn-primary mt-2" type="submit" value="Guardar">
-                <a class="btn btn-secondary mt-2" href="{% url 'home' %}">Cancelar</a>
+                <input class="btn btn-primary mt-2" type="submit" value="Save">
+                <a class="btn btn-secondary mt-2" href="{% url 'home' %}">Cancel</a>
             </form>
         </div>
     </div>
 </div>
 {% else %}
 <div class="container text-center">
-    <p>Tú no tienes permiso para actualizar este contacto. Inicia Sesión o registrate.</p>
+    <p>You do not have permission to update a contact, register or log in.</p>
 </div>
 {% endif %}
 {% endif %}

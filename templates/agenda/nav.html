@@ -9,17 +9,17 @@
       </a>
       {% if user.is_authenticated %}
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a class="nav-link px-2 link-secondary">Hola {{ user.username | title }} ❤ </a></li>
-        <a type="button" class="btn btn-outline-dark" href="{% url 'create' %}">Agregar Contacto</a>
+        <li><a class="nav-link px-2 link-secondary">Hello {{ user.username | title }} ❤ </a></li>
+        <a type="button" class="btn btn-outline-dark" href="{% url 'create' %}">Add Contact</a>
       </ul>
       <div class="col-md-3 text-end">
         
-        <a type="button" class="btn btn-danger" href="{% url 'logout' %}">Cerrar Sesión</a>
+        <a type="button" class="btn btn-danger" href="{% url 'logout' %}">Logout</a>
       </div>
       {% else %}
       <div class="col-md-3 text-end">
-        <a type="button" class="btn btn-primary" href="{% url 'login' %}">Iniciar Sesión</a>
-        <a type="button" class="btn btn-primary" href="{% url 'signup' %}">Registrarse</a>
+        <a type="button" class="btn btn-primary" href="{% url 'login' %}">Login</a>
+        <a type="button" class="btn btn-primary" href="{% url 'signup' %}">Sign Up</a>
       </div>
       {% endif %}
     </header>
